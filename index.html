@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Pregunta</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #ffeef2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+    }
+    button {
+      font-size: 18px;
+      padding: 10px 20px;
+      margin: 10px;
+      cursor: pointer;
+    }
+    #no {
+      transition: transform 0.2s;
+    }
+  </style>
+</head>
+<body>
+  <div id="contenedor">
+    <h1>¿Me perdonas?</h1>
+    <button onclick="si()">Sí</button>
+    <button id="no" onclick="no()">No</button>
+  </div>
+
+  <script>
+    let size = 1;
+    function no() {
+      size += 0.3;
+      document.getElementById("no").style.transform = `scale(${size})`;
+    }
+    function si() {
+      document.getElementById("contenedor").innerHTML =
+        "<h1>💖 La quiero, Mar 💖</h1>";
+    }
+  </script>
+</body>
+</html>
